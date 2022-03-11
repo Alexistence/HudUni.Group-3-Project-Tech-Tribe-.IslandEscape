@@ -104,7 +104,7 @@
                      <font>
                         <Font name="Lucida Calligraphy Italic" size="12.0" />
                      </font></Button>
-                        <Button fx:id="Btb_Inventory" mnemonicParsing="false" onAction="#handleInventoryButton" prefHeight="92.0" prefWidth="205.0" style="-fx-background-color: gray;" styleClass="basicButton" stylesheets="@../CSS/BasicUI" text="Inventory" textFill="#ffc300" GridPane.rowIndex="3">
+                        <Button fx:id="Btn_Inventory" mnemonicParsing="false" onAction="#handleInventoryButton" prefHeight="92.0" prefWidth="205.0" style="-fx-background-color: gray;" styleClass="basicButton" stylesheets="@../CSS/BasicUI" text="Inventory" textFill="#ffc300" GridPane.rowIndex="3">
                      <font>
                         <Font name="Lucida Calligraphy Italic" size="12.0" />
                      </font></Button>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1021.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.GUI.P2SkilltreeController">
+   <children>
+      <ImageView fitHeight="992.0" fitWidth="1353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@P2_Skilltree.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Btn_Skill_Cleave" layoutX="15.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleCleave" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_DeepCut" layoutX="15.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleDeepCut" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_Analysis" layoutX="456.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleAnalysis" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_Bio" layoutX="896.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleBio" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_Radiation" layoutX="1133.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleRadiation" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_LockOn" layoutX="456.0" layoutY="454.0" mnemonicParsing="false" onAction="#handleLockOn" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_PowerSlash" layoutX="15.0" layoutY="583.0" mnemonicParsing="false" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_PoisonDagger" layoutX="15.0" layoutY="729.0" mnemonicParsing="false" onAction="#handlePoisonDagger" opacity="0.2" prefHeight="77.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_FullAnalysis" layoutX="456.0" layoutY="592.0" mnemonicParsing="false" onAction="#handleFullAnalysis" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_ScatterBang" layoutX="244.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleScatterBang" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_HarshMist" layoutX="244.0" layoutY="583.0" mnemonicParsing="false" onAction="#handleMist" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_DataHack" layoutX="456.0" layoutY="894.0" mnemonicParsing="false" onAction="#handleDataHack" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_Venom" layoutX="896.0" layoutY="454.0" mnemonicParsing="false" onAction="#handleVenom" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_Toxic" layoutX="667.0" layoutY="454.0" mnemonicParsing="false" onAction="#handleToxic" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_VenomDrench" layoutX="667.0" layoutY="592.0" mnemonicParsing="false" onAction="#handleVenomDrench" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_AcidArmor" layoutX="667.0" layoutY="729.0" mnemonicParsing="false" onAction="#handleAcidArmor" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_ToxicWave" layoutX="1133.0" layoutY="454.0" mnemonicParsing="false" onAction="#handleToxicWave" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_VampiricWrath" layoutX="1133.0" layoutY="592.0" mnemonicParsing="false" onAction="#handleVampiricWrath" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_LifeDrain" layoutX="1133.0" layoutY="729.0" mnemonicParsing="false" onAction="#handleLifeDrain" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_PoisonFlow" layoutX="896.0" layoutY="592.0" mnemonicParsing="false" onAction="#handlePoisonFlow" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_QuickAnalysis" layoutX="456.0" layoutY="730.0" mnemonicParsing="false" onAction="#handleQuickAnalysis" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_VirusBreath" layoutX="896.0" layoutY="730.0" mnemonicParsing="false" onAction="#handleVirusBreath" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Skill_LeechLife" layoutX="1133.0" layoutY="877.0" mnemonicParsing="false" onAction="#handleLeechLife" opacity="0.2" prefHeight="84.0" prefWidth="132.0" />
+      <Button fx:id="Btn_Close" layoutX="1146.0" layoutY="972.0" mnemonicParsing="false" onAction="#handleCloseButton" prefHeight="35.0" prefWidth="120.0" text="Close" />
+   </children>
+</AnchorPane>
