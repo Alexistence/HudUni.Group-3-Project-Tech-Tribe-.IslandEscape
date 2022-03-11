@@ -80,22 +80,22 @@ public class P2SkilltreeController extends Skilltrees {
 
     @FXML
     void handleAcidArmor(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleAnalysis(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleBio(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleCleave(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
@@ -106,92 +106,92 @@ public class P2SkilltreeController extends Skilltrees {
 
     @FXML
     void handleDataHack(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleDeepCut(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleFullAnalysis(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleLeechLife(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleLifeDrain(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleLockOn(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleMist(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handlePoisonDagger(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handlePoisonFlow(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleQuickAnalysis(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleRadiation(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleScatterBang(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleToxic(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleToxicWave(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleVampiricWrath(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleVenom(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleVenomDrench(ActionEvent event) {
-
+        openSkillWindow();
     }
 
     @FXML
     void handleVirusBreath(ActionEvent event) {
-
+        openSkillWindow();
     }
 
 }
