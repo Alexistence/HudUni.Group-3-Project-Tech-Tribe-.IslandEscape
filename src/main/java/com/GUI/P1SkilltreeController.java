@@ -112,6 +112,7 @@ public class P1SkilltreeController extends Skilltrees {
 
     @FXML
     void handleCleave(ActionEvent event) {
+//        openSkillWindow(Cleave);
         openSkillWindow();
     }
 

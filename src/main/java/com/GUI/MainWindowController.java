@@ -12,7 +12,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -68,8 +70,11 @@ public class MainWindowController extends MainWindow{
         try{
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/partywindow_form.fxml"));
             Stage partywindow = new Stage();
+            partywindow.initStyle(StageStyle.TRANSPARENT);
             partywindow.setTitle("Party");
-            partywindow.setScene(new Scene(root, 400, 720));
+            Scene partyScene = new Scene(root, 430, 780);
+            partywindow.setScene(partyScene);
+            partyScene.setFill(Color.TRANSPARENT);
             partywindow.show();
         }
         catch (IOException exception){

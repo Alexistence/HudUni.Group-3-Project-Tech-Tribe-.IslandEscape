@@ -11,7 +11,9 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.TilePane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -59,8 +61,11 @@ public class PartyWindowController extends MainWindowController {
         try{
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/P1_skilltree_form.fxml"));
             Stage P1_Skilltree = new Stage();
+            P1_Skilltree.initStyle(StageStyle.TRANSPARENT);
             P1_Skilltree.setTitle("Abilities");
-            P1_Skilltree.setScene(new Scene(root, 1280, 890));
+            Scene P1_SkillScene = new Scene(root, 1450, 1020);
+            P1_Skilltree.setScene(P1_SkillScene);
+            P1_SkillScene.setFill(Color.TRANSPARENT);
             P1_Skilltree.show();
         }
         catch (IOException exception){
@@ -82,8 +87,11 @@ public class PartyWindowController extends MainWindowController {
         try{
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/P2_skilltree_form.fxml"));
             Stage P2_Skilltree = new Stage();
+            P2_Skilltree.initStyle(StageStyle.TRANSPARENT);
             P2_Skilltree.setTitle("Abilities");
-            P2_Skilltree.setScene(new Scene(root, 1353, 1021));
+            Scene P2_SkillScene = new Scene(root, 1450, 1020);
+            P2_Skilltree.setScene(P2_SkillScene);
+            P2_SkillScene.setFill(Color.TRANSPARENT);
             P2_Skilltree.show();
         }
         catch (IOException exception){

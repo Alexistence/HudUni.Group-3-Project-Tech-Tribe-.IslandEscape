@@ -14,9 +14,14 @@
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="Anc_PartyWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="400.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.GUI.PartyWindowController">
+<AnchorPane fx:id="Anc_PartyWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="430.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.GUI.PartyWindowController">
    <children>
-      <TilePane fx:id="Tile_PartyWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="400.0">
+      <ImageView fx:id="Img_Background" fitHeight="778.0" fitWidth="430.0" preserveRatio="true">
+         <image>
+            <Image url="@partyscrollscaled.png" />
+         </image>
+      </ImageView>
+      <TilePane fx:id="Tile_PartyWindow" layoutX="16.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="759.0" prefWidth="430.0" style="-fx-background-color: transparent;">
          <children>
             <GridPane fx:id="Grid_Layout" prefHeight="590.0" prefWidth="400.0">
               <columnConstraints>
@@ -41,29 +46,30 @@
                   <RowConstraints maxHeight="5.0" minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="126.0" minHeight="126.0" prefHeight="126.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ImageView fx:id="Img_P1_Profile" fitHeight="100.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <ImageView fx:id="Img_P1_Profile" fitHeight="126.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <image>
                         <Image url="@profile(placeholder).png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="Img_P2_Profile" fitHeight="100.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <ImageView fx:id="Img_P2_Profile" fitHeight="126.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <image>
                         <Image url="@profile(placeholder).png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="Img_P3_Profile" fitHeight="100.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                  <ImageView fx:id="Img_P3_Profile" fitHeight="126.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                      <image>
                         <Image url="@profile(placeholder).png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="Img_P4_Profile" fitHeight="100.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                  <ImageView fx:id="Img_P4_Profile" fitHeight="126.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="7">
                      <image>
                         <Image url="@profile(placeholder).png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="Img_P5_Profile" fitHeight="100.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                  <ImageView fx:id="Img_P5_Profile" fitHeight="126.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="9">
                      <image>
                         <Image url="@profile(placeholder).png" />
                      </image>
@@ -79,9 +85,9 @@
                       <RowConstraints maxHeight="50.0" minHeight="41.0" prefHeight="41.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="Btn_P1_equip" mnemonicParsing="false" onAction="#handleP1Equipment" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Equipment" textFill="#ffc300" GridPane.rowIndex="3">
+                        <Button fx:id="Btn_P1_equip" mnemonicParsing="false" onAction="#handleP1Equipment" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Equip" textFill="#ffc300" GridPane.rowIndex="3">
                            <font>
-                              <Font name="Lucida Calligraphy Italic" size="10.0" />
+                              <Font name="Lucida Handwriting Italic" size="11.0" />
                            </font>
                            <effect>
                               <DropShadow />
@@ -89,7 +95,7 @@
                         </Button>
                         <Button fx:id="Btn_P1_abilities" mnemonicParsing="false" onAction="#handleP1Abilities" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Abilities" textFill="#ffc300" GridPane.rowIndex="1">
                            <font>
-                              <Font name="Lucida Calligraphy Italic" size="10.0" />
+                              <Font name="Lucida Handwriting Italic" size="11.0" />
                            </font>
                            <effect>
                               <DropShadow />
@@ -110,15 +116,15 @@
                      <children>
                         <Button fx:id="Btn_P2_abilities" mnemonicParsing="false" onAction="#handleP2Abilities" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Abilities" textFill="#ffc300" GridPane.rowIndex="1">
                            <font>
-                              <Font name="Lucida Calligraphy Italic" size="10.0" />
+                              <Font name="Lucida Handwriting Italic" size="11.0" />
                            </font>
                            <effect>
                               <DropShadow />
                            </effect>
                         </Button>
-                        <Button fx:id="Btn_P2_equip" mnemonicParsing="false" onAction="#handleP2Equipment" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Equipment" textFill="#ffc300" GridPane.rowIndex="3">
+                        <Button fx:id="Btn_P2_equip" mnemonicParsing="false" onAction="#handleP2Equipment" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Equip" textFill="#ffc300" GridPane.rowIndex="3">
                            <font>
-                              <Font name="Lucida Calligraphy Italic" size="10.0" />
+                              <Font name="Lucida Handwriting Italic" size="11.0" />
                            </font>
                            <effect>
                               <DropShadow />
@@ -140,7 +146,7 @@
                         <RowConstraints maxHeight="21.0" minHeight="21.0" prefHeight="21.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label fx:id="Lbl_P1_name" text="&quot;Party Member 1&quot;" textFill="#ffe300" GridPane.columnSpan="2">
+                        <Label fx:id="Lbl_P1_name" text="&quot;Party Member 1&quot;" GridPane.columnSpan="2">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
@@ -157,37 +163,37 @@
                         </Label>
                         <ProgressBar fx:id="Bar_P1_HP" opacity="0.5" prefWidth="200.0" progress="1.0" style="-fx-control-inner-background: gray; -fx-accent: red;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <ProgressBar fx:id="Bar_P1_MP" opacity="0.5" prefWidth="200.0" progress="1.0" style="-fx-control-inner-background: gray;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label fx:id="Lbl_P1_health" text="Health:" textFill="#ffe300" GridPane.rowIndex="1">
+                        <Label fx:id="Lbl_P1_health" text="Health:" GridPane.rowIndex="1">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P1_mana" text="Mana:" textFill="#ffe300" GridPane.rowIndex="2">
+                        <Label fx:id="Lbl_P1_mana" text="Mana:" GridPane.rowIndex="2">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P1_equip" text="Equipment:" textFill="#ffe300" GridPane.rowIndex="3">
+                        <Label fx:id="Lbl_P1_equip" text="Equipment:" GridPane.rowIndex="3">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P1_weap" text="Weapon:" textFill="#ffe300" GridPane.rowIndex="4">
+                        <Label fx:id="Lbl_P1_weap" text="Weapon:" GridPane.rowIndex="4">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P1_equip_held" text="&lt;equip_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Label fx:id="Lbl_P1_equip_held" text="&lt;equip_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P1_weap_held" text="&lt;weap_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <Label fx:id="Lbl_P1_weap_held" text="&lt;weap_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P1_weap_offhand" text="&lt;weap_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <Label fx:id="Lbl_P1_weap_offhand" text="&lt;weap_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
@@ -207,15 +213,15 @@
                      <children>
                         <Button fx:id="Btn_P3_abilities" mnemonicParsing="false" onAction="#handleP3Abilities" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Abilities" textFill="#ffc300" GridPane.rowIndex="1">
                            <font>
-                              <Font name="Lucida Calligraphy Italic" size="10.0" />
+                              <Font name="Lucida Handwriting Italic" size="11.0" />
                            </font>
                            <effect>
                               <DropShadow />
                            </effect>
                         </Button>
-                        <Button fx:id="Btn_P3_equip" mnemonicParsing="false" onAction="#handleP3Equipment" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Equipment" textFill="#ffc300" GridPane.rowIndex="3">
+                        <Button fx:id="Btn_P3_equip" mnemonicParsing="false" onAction="#handleP3Equipment" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Equip" textFill="#ffc300" GridPane.rowIndex="3">
                            <font>
-                              <Font name="Lucida Calligraphy Italic" size="10.0" />
+                              <Font name="Lucida Handwriting Italic" size="11.0" />
                            </font>
                            <effect>
                               <DropShadow />
@@ -236,15 +242,15 @@
                      <children>
                         <Button fx:id="Btn_P4_abilities" mnemonicParsing="false" onAction="#handleP4Abilities" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Abilities" textFill="#ffc300" GridPane.rowIndex="1">
                            <font>
-                              <Font name="Lucida Calligraphy Italic" size="10.0" />
+                              <Font name="Lucida Handwriting Italic" size="11.0" />
                            </font>
                            <effect>
                               <DropShadow />
                            </effect>
                         </Button>
-                        <Button fx:id="Btn_P4_equip" mnemonicParsing="false" onAction="#handleP4Equipment" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Equipment" textFill="#ffc300" GridPane.rowIndex="3">
+                        <Button fx:id="Btn_P4_equip" mnemonicParsing="false" onAction="#handleP4Equipment" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Equip" textFill="#ffc300" GridPane.rowIndex="3">
                            <font>
-                              <Font name="Lucida Calligraphy Italic" size="10.0" />
+                              <Font name="Lucida Handwriting Italic" size="11.0" />
                            </font>
                            <effect>
                               <DropShadow />
@@ -265,15 +271,15 @@
                      <children>
                         <Button fx:id="Btn_P5_abilities" mnemonicParsing="false" onAction="#handleP5Abilities" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Abilities" textFill="#ffc300" GridPane.rowIndex="1">
                            <font>
-                              <Font name="Lucida Calligraphy Italic" size="10.0" />
+                              <Font name="Lucida Handwriting Italic" size="11.0" />
                            </font>
                            <effect>
                               <DropShadow />
                            </effect>
                         </Button>
-                        <Button fx:id="Btn_P5_equip" mnemonicParsing="false" onAction="#handleP5Equipment" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Equipment" textFill="#ffc300" GridPane.rowIndex="3">
+                        <Button fx:id="Btn_P5_equip" mnemonicParsing="false" onAction="#handleP5Equipment" prefHeight="50.0" prefWidth="66.0" style="-fx-background-color: gray;" text="Equip" textFill="#ffc300" GridPane.rowIndex="3">
                            <font>
-                              <Font name="Lucida Calligraphy Italic" size="10.0" />
+                              <Font name="Lucida Handwriting Italic" size="11.0" />
                            </font>
                            <effect>
                               <DropShadow />
@@ -307,42 +313,42 @@
                         </Label>
                         <ProgressBar fx:id="Bar_P2_MP" opacity="0.5" prefWidth="200.0" progress="1.0" style="-fx-control-inner-background: gray;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <ProgressBar fx:id="Bar_P2_HP" opacity="0.5" prefWidth="200.0" progress="1.0" style="-fx-background-color: gray; -fx-control-inner-background: gray; -fx-accent: red;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="Lbl_P2_name" text="&quot;Party Member 2&quot;" textFill="#ffe300" GridPane.columnSpan="2">
+                        <Label fx:id="Lbl_P2_name" text="&quot;Party Member 2&quot;" GridPane.columnSpan="2">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P2_health" text="Health:" textFill="#ffe300" GridPane.rowIndex="1">
+                        <Label fx:id="Lbl_P2_health" text="Health:" GridPane.rowIndex="1">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P2_mana" text="Equipment:" textFill="#ffe300" GridPane.rowIndex="3">
+                        <Label fx:id="Lbl_P2_mana" text="Equipment:" GridPane.rowIndex="3">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P2_equip" text="Mana:" textFill="#ffe300" GridPane.rowIndex="2">
+                        <Label fx:id="Lbl_P2_equip" text="Mana:" GridPane.rowIndex="2">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P2_weap" text="Weapon:" textFill="#ffe300" GridPane.rowIndex="4">
+                        <Label fx:id="Lbl_P2_weap" text="Weapon:" GridPane.rowIndex="4">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P2_equip_held" text="&lt;equip_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Label fx:id="Lbl_P2_equip_held" text="&lt;equip_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P2_weap_held" text="&lt;weap_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <Label fx:id="Lbl_P2_weap_held" text="&lt;weap_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P2_weap_offhand" text="&lt;weap_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <Label fx:id="Lbl_P2_weap_offhand" text="&lt;weap_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
@@ -363,7 +369,7 @@
                         <RowConstraints maxHeight="21.0" minHeight="21.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label fx:id="Lbl_P3_name" text="&quot;Party Member 3&quot;" textFill="#ffe300" GridPane.columnSpan="2">
+                        <Label fx:id="Lbl_P3_name" text="&quot;Party Member 3&quot;" GridPane.columnSpan="2">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
@@ -380,37 +386,37 @@
                         </Label>
                         <ProgressBar fx:id="Bar_P3_HP" opacity="0.5" prefWidth="200.0" progress="1.0" style="-fx-background-color: gray; -fx-control-inner-background: gray; -fx-accent: red;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <ProgressBar fx:id="Bar_P3_MP" opacity="0.5" prefWidth="200.0" progress="1.0" style="-fx-control-inner-background: gray;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label fx:id="Lbl_P3_health" text="Health:" textFill="#ffe300" GridPane.rowIndex="1">
+                        <Label fx:id="Lbl_P3_health" text="Health:" GridPane.rowIndex="1">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P3_mana" text="Mana:" textFill="#ffe300" GridPane.rowIndex="2">
+                        <Label fx:id="Lbl_P3_mana" text="Mana:" GridPane.rowIndex="2">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P3_equip" text="Equipment:" textFill="#ffe300" GridPane.rowIndex="3">
+                        <Label fx:id="Lbl_P3_equip" text="Equipment:" GridPane.rowIndex="3">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P3_weap" text="Weapon:" textFill="#ffe300" GridPane.rowIndex="4">
+                        <Label fx:id="Lbl_P3_weap" text="Weapon:" GridPane.rowIndex="4">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P3_equip_held" text="&lt;equip_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Label fx:id="Lbl_P3_equip_held" text="&lt;equip_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P3_weap_held" text="&lt;weap_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <Label fx:id="Lbl_P3_weap_held" text="&lt;weap_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P3_weap_offhand" text="&lt;weap_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <Label fx:id="Lbl_P3_weap_offhand" text="&lt;weap_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
@@ -431,7 +437,7 @@
                         <RowConstraints maxHeight="21.0" minHeight="21.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label fx:id="Lbl_P4_name" text="&quot;Party Member 4&quot;" textFill="#ffe300" GridPane.columnSpan="2">
+                        <Label fx:id="Lbl_P4_name" text="&quot;Party Member 4&quot;" GridPane.columnSpan="2">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
@@ -448,37 +454,37 @@
                         </Label>
                         <ProgressBar fx:id="Bar_P4_HP" opacity="0.5" prefWidth="200.0" progress="1.0" style="-fx-background-color: gray; -fx-control-inner-background: gray; -fx-accent: red;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <ProgressBar fx:id="Bar_P4_MP" opacity="0.5" prefWidth="200.0" progress="1.0" style="-fx-control-inner-background: gray;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label fx:id="Lbl_P4_health" text="Health:" textFill="#ffe300" GridPane.rowIndex="1">
+                        <Label fx:id="Lbl_P4_health" text="Health:" GridPane.rowIndex="1">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P4_mana" text="Equipment:" textFill="#ffe300" GridPane.rowIndex="3">
+                        <Label fx:id="Lbl_P4_mana" text="Equipment:" GridPane.rowIndex="3">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P4_equip" text="Mana:" textFill="#ffe300" GridPane.rowIndex="2">
+                        <Label fx:id="Lbl_P4_equip" text="Mana:" GridPane.rowIndex="2">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P4_weap" text="Weapon:" textFill="#ffe300" GridPane.rowIndex="4">
+                        <Label fx:id="Lbl_P4_weap" text="Weapon:" GridPane.rowIndex="4">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P4_equip_held" text="&lt;equip_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Label fx:id="Lbl_P4_equip_held" text="&lt;equip_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P4_weap_held" text="&lt;weap_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <Label fx:id="Lbl_P4_weap_held" text="&lt;weap_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P4_weap_offhand" text="&lt;weap_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <Label fx:id="Lbl_P4_weap_offhand" text="&lt;weap_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
@@ -499,7 +505,7 @@
                         <RowConstraints maxHeight="21.0" minHeight="21.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label fx:id="Lbl_P5_name" text="&quot;Party Member 5&quot;" textFill="#ffe300" GridPane.columnSpan="2">
+                        <Label fx:id="Lbl_P5_name" text="&quot;Party Member 5&quot;" GridPane.columnSpan="2">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
@@ -516,43 +522,73 @@
                         </Label>
                         <ProgressBar fx:id="Bar_P5_HP" opacity="0.5" prefWidth="200.0" progress="1.0" style="-fx-background-color: gray; -fx-control-inner-background: gray; -fx-accent: red;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <ProgressBar fx:id="Bar_P5_MP" opacity="0.5" prefWidth="200.0" progress="1.0" style="-fx-control-inner-background: gray;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label fx:id="Lbl_P5_health" text="Health:" textFill="#ffe300" GridPane.rowIndex="1">
+                        <Label fx:id="Lbl_P5_health" text="Health:" GridPane.rowIndex="1">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P5_mana" text="Equipment:" textFill="#ffe300" GridPane.rowIndex="3">
+                        <Label fx:id="Lbl_P5_mana" text="Equipment:" GridPane.rowIndex="3">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P5_equip" text="Mana:" textFill="#ffe300" GridPane.rowIndex="2">
+                        <Label fx:id="Lbl_P5_equip" text="Mana:" GridPane.rowIndex="2">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P5_weap" text="Weapon:" textFill="#ffe300" GridPane.rowIndex="4">
+                        <Label fx:id="Lbl_P5_weap" text="Weapon:" GridPane.rowIndex="4">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P5_equip_held" text="&lt;equip_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Label fx:id="Lbl_P5_equip_held" text="&lt;equip_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P5_weap_held" text="&lt;weap_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <Label fx:id="Lbl_P5_weap_held" text="&lt;weap_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbl_P5_weap_offhand" text="&lt;weap_held&gt;" textFill="#ffe300" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <Label fx:id="Lbl_P5_weap_offhand" text="&lt;weap_held&gt;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <font>
                               <Font name="Lucida Handwriting Italic" size="12.0" />
                            </font>
                         </Label>
                      </children>
                   </GridPane>
+                  <Button fx:id="Btn_PartyClose" mnemonicParsing="false" onAction="#handlePartyClose" prefHeight="25.0" prefWidth="100.0" text="Close" GridPane.columnIndex="6" GridPane.rowIndex="11">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="Img_P1_Border" fitHeight="126.0" fitWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@portraitbordersmallalpha.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Img_P2_Border" fitHeight="126.0" fitWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <image>
+                        <Image url="@portraitbordersmallalpha.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Img_P3_Border" fitHeight="126.0" fitWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <image>
+                        <Image url="@portraitbordersmallalpha.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Img_P4_Border" fitHeight="126.0" fitWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <image>
+                        <Image url="@portraitbordersmallalpha.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Img_P5_Border" fitHeight="126.0" fitWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <image>
+                        <Image url="@portraitbordersmallalpha.png" />
+                     </image>
+                  </ImageView>
                </children>
             </GridPane>
          </children>
@@ -560,6 +596,5 @@
             <Glow level="0.5" />
          </effect>
       </TilePane>
-      <Button fx:id="Btn_PartyClose" layoutX="286.0" layoutY="671.0" mnemonicParsing="false" onAction="#handlePartyClose" prefHeight="25.0" prefWidth="100.0" text="Close" />
    </children>
 </AnchorPane>
