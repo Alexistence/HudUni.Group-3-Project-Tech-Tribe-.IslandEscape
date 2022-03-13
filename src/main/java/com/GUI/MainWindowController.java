@@ -21,6 +21,9 @@ import java.io.IOException;
 
 public class MainWindowController extends MainWindow{
 
+    private double xOffset;
+    private double yOffset;
+
     @FXML
     private ProgressBar Bar_Health;
 
@@ -76,6 +79,14 @@ public class MainWindowController extends MainWindow{
             partywindow.setScene(partyScene);
             partyScene.setFill(Color.TRANSPARENT);
             partywindow.show();
+            partyScene.setOnMousePressed(clickEvent -> {
+                xOffset = partywindow.getX() - clickEvent.getScreenX();
+                yOffset = partywindow.getY() - clickEvent.getScreenY();
+            });
+            partyScene.setOnMouseDragged(dragEvent -> {
+                partywindow.setX(dragEvent.getScreenX() + xOffset);
+                partywindow.setY(dragEvent.getScreenY() + yOffset);
+            });
         }
         catch (IOException exception){
             exception.printStackTrace();

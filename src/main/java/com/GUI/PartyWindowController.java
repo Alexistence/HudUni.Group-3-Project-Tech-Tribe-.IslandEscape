@@ -1,5 +1,6 @@
 package com.GUI;
 
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.TilePane;
@@ -18,6 +20,18 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class PartyWindowController extends MainWindowController {
+
+    private double xOffset = 0;
+    private double yOffset = 0;
+
+    @FXML
+    void handleDrag(MouseEvent event) {
+//        Scene stage = (Stage) Anc_PartyWindow.getScene().getWindow();
+//        xOffset = event.getSceneX();
+//        yOffset = event.getSceneY();
+//        stage.setX(event.getScreenX() - xOffset);
+//        stage.setY(event.getScreenY() - yOffset);
+    }
 
     @FXML
     private void openCharWindowFemale(){
@@ -30,6 +44,14 @@ public class PartyWindowController extends MainWindowController {
             EquipWindowFemale.setScene(EquipSceneFemale);
             EquipSceneFemale.setFill(Color.TRANSPARENT);
             EquipWindowFemale.show();
+            EquipSceneFemale.setOnMousePressed(clickEvent -> {
+                xOffset = EquipWindowFemale.getX() - clickEvent.getScreenX();
+                yOffset = EquipWindowFemale.getY() - clickEvent.getScreenY();
+            });
+            EquipSceneFemale.setOnMouseDragged(dragEvent -> {
+                EquipWindowFemale.setX(dragEvent.getScreenX() + xOffset);
+                EquipWindowFemale.setY(dragEvent.getScreenY() + yOffset);
+            });
         }
         catch (IOException exception){
             exception.printStackTrace();
@@ -47,6 +69,14 @@ public class PartyWindowController extends MainWindowController {
             EquipWindowMale.setScene(EquipSceneMale);
             EquipSceneMale.setFill(Color.TRANSPARENT);
             EquipWindowMale.show();
+            EquipSceneMale.setOnMousePressed(clickEvent -> {
+                xOffset = EquipWindowMale.getX() - clickEvent.getScreenX();
+                yOffset = EquipWindowMale.getY() - clickEvent.getScreenY();
+            });
+            EquipSceneMale.setOnMouseDragged(dragEvent -> {
+                EquipWindowMale.setX(dragEvent.getScreenX() + xOffset);
+                EquipWindowMale.setY(dragEvent.getScreenY() + yOffset);
+            });
         }
         catch (IOException exception){
             exception.printStackTrace();
@@ -100,6 +130,14 @@ public class PartyWindowController extends MainWindowController {
             P1_Skilltree.setScene(P1_SkillScene);
             P1_SkillScene.setFill(Color.TRANSPARENT);
             P1_Skilltree.show();
+            P1_SkillScene.setOnMousePressed(clickEvent -> {
+                xOffset = P1_Skilltree.getX() - clickEvent.getScreenX();
+                yOffset = P1_Skilltree.getY() - clickEvent.getScreenY();
+            });
+            P1_SkillScene.setOnMouseDragged(dragEvent -> {
+                P1_Skilltree.setX(dragEvent.getScreenX() + xOffset);
+                P1_Skilltree.setY(dragEvent.getScreenY() + yOffset);
+            });
         }
         catch (IOException exception){
             exception.printStackTrace();
@@ -128,6 +166,14 @@ public class PartyWindowController extends MainWindowController {
             P2_Skilltree.setScene(P2_SkillScene);
             P2_SkillScene.setFill(Color.TRANSPARENT);
             P2_Skilltree.show();
+            P2_SkillScene.setOnMousePressed(clickEvent -> {
+                xOffset = P2_Skilltree.getX() - clickEvent.getScreenX();
+                yOffset = P2_Skilltree.getY() - clickEvent.getScreenY();
+            });
+            P2_SkillScene.setOnMouseDragged(dragEvent -> {
+                P2_Skilltree.setX(dragEvent.getScreenX() + xOffset);
+                P2_Skilltree.setY(dragEvent.getScreenY() + yOffset);
+            });
         }
         catch (IOException exception){
             exception.printStackTrace();

@@ -20,12 +20,12 @@
             <Image url="@profile(placeholder).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="Img_1stweap" fitHeight="126.0" fitWidth="100.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Img_1stWeap" fitHeight="126.0" fitWidth="100.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@portraitbordersmallalpha.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="Img_2ndweap" fitHeight="126.0" fitWidth="100.0" layoutX="264.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Img_2ndWeap" fitHeight="126.0" fitWidth="100.0" layoutX="264.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@portraitbordersmallalpha.png" />
          </image>
@@ -107,17 +107,17 @@
             <Font name="Lucida Handwriting Italic" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Health1" layoutX="146.0" layoutY="310.0" text="&lt;Item&gt;" textAlignment="CENTER" textFill="#ffc300">
+      <Label fx:id="Lbl_Equip" layoutX="146.0" layoutY="310.0" text="&lt;Equip&gt;" textAlignment="CENTER" textFill="#ffc300">
          <font>
             <Font name="Lucida Handwriting Italic" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Health11" layoutX="278.0" layoutY="451.0" text="&lt;Item&gt;" textAlignment="CENTER" textFill="#ffc300">
+      <Label fx:id="Lbl_2ndWeap" layoutX="255.0" layoutY="451.0" text="&lt;2ndWeap&gt;" textAlignment="CENTER" textFill="#ffc300">
          <font>
             <Font name="Lucida Handwriting Italic" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Health12" layoutX="14.0" layoutY="451.0" text="&lt;Item&gt;" textAlignment="CENTER" textFill="#ffc300">
+      <Label fx:id="Lbl1stWeap" layoutX="4.0" layoutY="451.0" text="&lt;1stWeap" textAlignment="CENTER" textFill="#ffc300">
          <font>
             <Font name="Lucida Handwriting Italic" size="18.0" />
          </font>
