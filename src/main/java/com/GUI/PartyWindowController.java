@@ -19,6 +19,39 @@ import java.io.IOException;
 
 public class PartyWindowController extends MainWindowController {
 
+    @FXML
+    private void openCharWindowFemale(){
+        try{
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/equipwindow_female_form.fxml"));
+            Stage EquipWindowFemale = new Stage();
+            EquipWindowFemale.initStyle(StageStyle.TRANSPARENT);
+            EquipWindowFemale.setTitle("Equipment");
+            Scene EquipSceneFemale = new Scene(root, 800,800);
+            EquipWindowFemale.setScene(EquipSceneFemale);
+            EquipSceneFemale.setFill(Color.TRANSPARENT);
+            EquipWindowFemale.show();
+        }
+        catch (IOException exception){
+            exception.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void openCharWindowMale(){
+        try{
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/equipwindow_male_form.fxml"));
+            Stage EquipWindowMale = new Stage();
+            EquipWindowMale.initStyle(StageStyle.TRANSPARENT);
+            EquipWindowMale.setTitle("Equipment");
+            Scene EquipSceneMale = new Scene(root, 800,800);
+            EquipWindowMale.setScene(EquipSceneMale);
+            EquipSceneMale.setFill(Color.TRANSPARENT);
+            EquipWindowMale.show();
+        }
+        catch (IOException exception){
+            exception.printStackTrace();
+        }
+    }
 
     @FXML
     private AnchorPane Anc_PartyWindow;
@@ -77,7 +110,9 @@ public class PartyWindowController extends MainWindowController {
     private Button Btn_P1_equip;
 
     @FXML
-    void handleP1Equipment(ActionEvent Event) {}
+    void handleP1Equipment(ActionEvent Event) {
+        openCharWindowMale();
+    }
 
     @FXML
     private Button Btn_P2_abilities;
@@ -103,7 +138,9 @@ public class PartyWindowController extends MainWindowController {
     private Button Btn_P2_equip;
 
     @FXML
-    void handleP2Equipment(ActionEvent Event) {}
+    void handleP2Equipment(ActionEvent Event) {
+        openCharWindowMale();
+    }
 
     @FXML
     private Button Btn_P3_abilities;
@@ -115,7 +152,9 @@ public class PartyWindowController extends MainWindowController {
     private Button Btn_P3_equip;
 
     @FXML
-    void handleP3Equipment(ActionEvent Event) {}
+    void handleP3Equipment(ActionEvent Event) {
+        openCharWindowFemale();
+    }
 
     @FXML
     private Button Btn_P4_abilities;
@@ -127,7 +166,9 @@ public class PartyWindowController extends MainWindowController {
     private Button Btn_P4_equip;
 
     @FXML
-    void handleP4Equipment(ActionEvent Event) {}
+    void handleP4Equipment(ActionEvent Event) {
+        openCharWindowMale();
+    }
 
     @FXML
     private Button Btn_P5_abilities;
@@ -139,7 +180,9 @@ public class PartyWindowController extends MainWindowController {
     public Button Btn_P5_equip;
 
     @FXML
-    void handleP5Equipment(ActionEvent Event) {}
+    void handleP5Equipment(ActionEvent Event) {
+        openCharWindowFemale();
+    }
 
     @FXML
     private Button Btn_PartyClose;
