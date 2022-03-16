@@ -71,21 +71,21 @@ public class MainWindowController extends MainWindow{
         //Debug-Only Intended Code
         typeWriterPrint("Party Pressed!\n");
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/partywindow_form.fxml"));
-            Stage partywindow = new Stage();
-            partywindow.initStyle(StageStyle.TRANSPARENT);
-            partywindow.setTitle("Party");
-            Scene partyScene = new Scene(root, 430, 780);
-            partywindow.setScene(partyScene);
-            partyScene.setFill(Color.TRANSPARENT);
-            partywindow.show();
-            partyScene.setOnMousePressed(clickEvent -> {
-                xOffset = partywindow.getX() - clickEvent.getScreenX();
-                yOffset = partywindow.getY() - clickEvent.getScreenY();
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/PartyWindow_form.fxml"));
+            Stage PartyWindow = new Stage();
+            PartyWindow.initStyle(StageStyle.TRANSPARENT);
+            PartyWindow.setTitle("Party");
+            Scene PartyScene = new Scene(root, 430, 780);
+            PartyWindow.setScene(PartyScene);
+            PartyScene.setFill(Color.TRANSPARENT);
+            PartyWindow.show();
+            PartyScene.setOnMousePressed(clickEvent -> {
+                xOffset = PartyWindow.getX() - clickEvent.getScreenX();
+                yOffset = PartyWindow.getY() - clickEvent.getScreenY();
             });
-            partyScene.setOnMouseDragged(dragEvent -> {
-                partywindow.setX(dragEvent.getScreenX() + xOffset);
-                partywindow.setY(dragEvent.getScreenY() + yOffset);
+            PartyScene.setOnMouseDragged(dragEvent -> {
+                PartyWindow.setX(dragEvent.getScreenX() + xOffset);
+                PartyWindow.setY(dragEvent.getScreenY() + yOffset);
             });
         }
         catch (IOException exception){
@@ -93,11 +93,26 @@ public class MainWindowController extends MainWindow{
         }
     }
 
-    @FXML
-    void handleInventoryButton(ActionEvent event) {
-        //Debug-Only Intended Code
-        typeWriterPrint("Inventory Pressed!\n");
-    }
+//    @FXML
+//    void handleInventoryButton(ActionEvent event) {
+//        //Debug-Only Intended Code
+//        typeWriterPrint("Inventory Pressed!\n");
+//        Parent root = FXMLLoader.load(getClass().getResource("/fxml/inventory_form.fxml"));
+//        Stage InventoryWindow = new Stage();
+//        InventoryWindow.setTitle("Inventory");
+//        Scene InventoryScene = new Scene(root, 400, 600);
+//        InventoryWindow.setScene(InventoryScene);
+//        InventoryScene.setFill(Color.TRANSPARENT);
+//        InventoryWindow.show();
+//        InventoryScene.setOnMousePressed(clickEvent -> {
+//            xOffset = InventoryWindow.getX() - clickEvent.getScreenX();
+//            yOffset = InventoryWindow.getY() - clickEvent.getScreenY();
+//        });
+//        InventoryScene.setOnMouseDragged(dragEvent -> {
+//            InventoryWindow.setX(dragEvent.getScreenX() + xOffset);
+//            InventoryWindow.setY(dragEvent.getScreenY() + yOffset);
+//        });
+//    }
 
     @FXML
     void handleMapButton(ActionEvent event) {
