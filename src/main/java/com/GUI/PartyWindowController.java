@@ -1,6 +1,5 @@
 package com.GUI;
 
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -34,9 +33,9 @@ public class PartyWindowController extends MainWindowController {
     }
 
     @FXML
-    private void openCharWindowFemale(){
+    private void openCharWindowFemale(int charNum){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/equipwindow_female_form.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/equipwindow_P" + charNum + "_form.fxml"));
             Stage EquipWindowFemale = new Stage();
             EquipWindowFemale.initStyle(StageStyle.TRANSPARENT);
             EquipWindowFemale.setTitle("Equipment");
@@ -59,9 +58,9 @@ public class PartyWindowController extends MainWindowController {
     }
 
     @FXML
-    private void openCharWindowMale(){
+    private void openCharWindowMale(int charNum){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/equipwindow_male_form.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/equipwindow_P" + charNum + "_form.fxml"));
             Stage EquipWindowMale = new Stage();
             EquipWindowMale.initStyle(StageStyle.TRANSPARENT);
             EquipWindowMale.setTitle("Equipment");
@@ -82,6 +81,31 @@ public class PartyWindowController extends MainWindowController {
             exception.printStackTrace();
         }
     }
+
+    @FXML
+    private void openAbilityWindow(int charNum){
+    try{
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/P" + charNum + "_skilltree_form.fxml"));
+        Stage Skilltree_Stage = new Stage();
+        Skilltree_Stage.initStyle(StageStyle.TRANSPARENT);
+        Skilltree_Stage.setTitle("Abilities");
+        Scene P1_SkillScene = new Scene(root, 1450, 1020);
+        Skilltree_Stage.setScene(P1_SkillScene);
+        P1_SkillScene.setFill(Color.TRANSPARENT);
+        Skilltree_Stage.show();
+        P1_SkillScene.setOnMousePressed(clickEvent -> {
+            xOffset = Skilltree_Stage.getX() - clickEvent.getScreenX();
+            yOffset = Skilltree_Stage.getY() - clickEvent.getScreenY();
+        });
+        P1_SkillScene.setOnMouseDragged(dragEvent -> {
+            Skilltree_Stage.setX(dragEvent.getScreenX() + xOffset);
+            Skilltree_Stage.setY(dragEvent.getScreenY() + yOffset);
+        });
+    }
+        catch (IOException exception){
+        exception.printStackTrace();
+    }
+}
 
     @FXML
     private AnchorPane Anc_PartyWindow;
@@ -121,27 +145,7 @@ public class PartyWindowController extends MainWindowController {
 
     @FXML
     void handleP1Abilities(ActionEvent Event) {
-        try{
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/P1_skilltree_form.fxml"));
-            Stage P1_Skilltree = new Stage();
-            P1_Skilltree.initStyle(StageStyle.TRANSPARENT);
-            P1_Skilltree.setTitle("Abilities");
-            Scene P1_SkillScene = new Scene(root, 1450, 1020);
-            P1_Skilltree.setScene(P1_SkillScene);
-            P1_SkillScene.setFill(Color.TRANSPARENT);
-            P1_Skilltree.show();
-            P1_SkillScene.setOnMousePressed(clickEvent -> {
-                xOffset = P1_Skilltree.getX() - clickEvent.getScreenX();
-                yOffset = P1_Skilltree.getY() - clickEvent.getScreenY();
-            });
-            P1_SkillScene.setOnMouseDragged(dragEvent -> {
-                P1_Skilltree.setX(dragEvent.getScreenX() + xOffset);
-                P1_Skilltree.setY(dragEvent.getScreenY() + yOffset);
-            });
-        }
-        catch (IOException exception){
-            exception.printStackTrace();
-        }
+        openAbilityWindow(1);
     }
 
     @FXML
@@ -149,7 +153,7 @@ public class PartyWindowController extends MainWindowController {
 
     @FXML
     void handleP1Equipment(ActionEvent Event) {
-        openCharWindowMale();
+        openCharWindowMale(1);
     }
 
     @FXML
@@ -157,27 +161,7 @@ public class PartyWindowController extends MainWindowController {
 
     @FXML
     void handleP2Abilities(ActionEvent Event) {
-        try{
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/P2_skilltree_form.fxml"));
-            Stage P2_Skilltree = new Stage();
-            P2_Skilltree.initStyle(StageStyle.TRANSPARENT);
-            P2_Skilltree.setTitle("Abilities");
-            Scene P2_SkillScene = new Scene(root, 1450, 1020);
-            P2_Skilltree.setScene(P2_SkillScene);
-            P2_SkillScene.setFill(Color.TRANSPARENT);
-            P2_Skilltree.show();
-            P2_SkillScene.setOnMousePressed(clickEvent -> {
-                xOffset = P2_Skilltree.getX() - clickEvent.getScreenX();
-                yOffset = P2_Skilltree.getY() - clickEvent.getScreenY();
-            });
-            P2_SkillScene.setOnMouseDragged(dragEvent -> {
-                P2_Skilltree.setX(dragEvent.getScreenX() + xOffset);
-                P2_Skilltree.setY(dragEvent.getScreenY() + yOffset);
-            });
-        }
-        catch (IOException exception){
-            exception.printStackTrace();
-        }
+        openAbilityWindow(2);
     }
 
     @FXML
@@ -185,49 +169,54 @@ public class PartyWindowController extends MainWindowController {
 
     @FXML
     void handleP2Equipment(ActionEvent Event) {
-        openCharWindowMale();
+        openCharWindowMale(2);
     }
 
     @FXML
     private Button Btn_P3_abilities;
 
     @FXML
-    void handleP3Abilities(ActionEvent Event) {}
-
+    void handleP3Abilities(ActionEvent Event) {
+        openAbilityWindow(3);
+    }
     @FXML
     private Button Btn_P3_equip;
 
     @FXML
     void handleP3Equipment(ActionEvent Event) {
-        openCharWindowFemale();
+        openCharWindowFemale(3);
     }
 
     @FXML
     private Button Btn_P4_abilities;
 
     @FXML
-    void handleP4Abilities(ActionEvent Event) {}
+    void handleP4Abilities(ActionEvent Event) {
+        openAbilityWindow(4);
+    }
 
     @FXML
     private Button Btn_P4_equip;
 
     @FXML
     void handleP4Equipment(ActionEvent Event) {
-        openCharWindowMale();
+        openCharWindowMale(4);
     }
 
     @FXML
     private Button Btn_P5_abilities;
 
     @FXML
-    void handleP5Abilities(ActionEvent Event) {}
+    void handleP5Abilities(ActionEvent Event) {
+        openAbilityWindow(5);
+    }
 
     @FXML
     public Button Btn_P5_equip;
 
     @FXML
     void handleP5Equipment(ActionEvent Event) {
-        openCharWindowFemale();
+        openCharWindowFemale(5);
     }
 
     @FXML

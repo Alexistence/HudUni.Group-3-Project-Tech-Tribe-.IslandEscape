@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="Btn_Close" layoutX="486.0" layoutY="481.0" maxWidth="100.0" mnemonicParsing="false" prefWidth="100.0" text="Button" />
+      <ImageView layoutX="10.0" layoutY="10.0">
+         <image>
+            <Image url="@../../../../../../../CFP2125-2122%20-%20Project%201/Text-Adventure%20Project/Resources/Textures/Woodwork/portraitbordersmallalpha.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

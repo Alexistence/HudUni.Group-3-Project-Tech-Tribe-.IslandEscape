@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.GUI.CharWindowController">
+   <children>
+      <ImageView fx:id="Img_Background" fitHeight="800.0" fitWidth="800.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@equipsilhouettemale.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Img_Portrait" fitHeight="126.0" fitWidth="100.0" layoutX="133.0" preserveRatio="true">
+         <image>
+            <Image url="@profileP2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Img_1stWeap" fitHeight="126.0" fitWidth="100.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@portraitbordersmallalpha.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Img_2ndWeap" fitHeight="126.0" fitWidth="100.0" layoutX="264.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@portraitbordersmallalpha.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Img_equip" fitHeight="126.0" fitWidth="100.0" layoutX="132.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@portraitbordersmallalpha.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="Lbl_CharName" layoutX="364.0" layoutY="14.0" prefHeight="56.0" prefWidth="375.0" text="George Bland" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Calligraphy Italic" size="36.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="Bar_HP" layoutX="539.0" layoutY="101.0" opacity="0.5" prefWidth="200.0" progress="1.0" style="-fx-control-inner-background: gray; -fx-accent: red;" />
+      <ProgressBar fx:id="Bar_MP" layoutX="539.0" layoutY="134.0" opacity="0.5" prefWidth="200.0" progress="1.0" style="-fx-control-inner-background: gray;" />
+      <Label fx:id="Lbl_Health" layoutX="371.0" layoutY="98.0" text="Health:" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_Mana" layoutX="370.0" layoutY="131.0" text="Mana:" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_Attack" layoutX="367.0" layoutY="176.0" text="Physical Attack:" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_Defense" layoutX="367.0" layoutY="206.0" text="Physical Defense:" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_Accuracy" layoutX="370.0" layoutY="295.0" text="Accuracy:" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_Luck" layoutX="374.0" layoutY="358.0" text="Luck:" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_Speed" layoutX="372.0" layoutY="325.0" text="Speed:" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_MAttack" layoutX="368.0" layoutY="239.0" text="Magical Attack:" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_MDefense" layoutX="368.0" layoutY="269.0" text="Magical Defense:" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_ItemEffects" layoutX="373.0" layoutY="406.0" text="Item Effects:" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_HP" layoutX="613.0" layoutY="95.0" text="&lt;HP&gt;" textAlignment="CENTER" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_MP" layoutX="612.0" layoutY="128.0" text="&lt;MP&gt;" textAlignment="CENTER" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_AbilityEffects" layoutX="376.0" layoutY="436.0" text="Ability Effects:" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_Equip" layoutX="146.0" layoutY="310.0" text="&lt;Equip&gt;" textAlignment="CENTER" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_2ndWeap" layoutX="255.0" layoutY="451.0" text="&lt;2ndWeap&gt;" textAlignment="CENTER" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl1stWeap" layoutX="4.0" layoutY="451.0" text="&lt;1stWeap" textAlignment="CENTER" textFill="#ffc300">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="Btn_Close" layoutX="639.0" layoutY="761.0" maxHeight="25.0" maxWidth="100.0" minHeight="25.0" minWidth="100.0" mnemonicParsing="false" onAction="#handleClose" prefHeight="25.0" prefWidth="100.0" text="Close" textAlignment="RIGHT" />
+   </children>
+</AnchorPane>
