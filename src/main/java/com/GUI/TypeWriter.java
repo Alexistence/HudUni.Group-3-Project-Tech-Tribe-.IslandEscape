@@ -37,6 +37,7 @@ public class TypeWriter {
 //    }
 
     public void typeWriterPrint(MainWindowController Controller, String textInput) {
+        try {
             String currentText = Controller.Lbl_Output.getText();
 
             final Animation typewriter = new Transition() {
@@ -51,5 +52,8 @@ public class TypeWriter {
                 }
             };
             typewriter.play();
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
         }
     }
+}

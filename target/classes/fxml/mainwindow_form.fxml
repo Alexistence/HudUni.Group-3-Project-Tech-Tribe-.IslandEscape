@@ -237,7 +237,7 @@
                      </effect></Button>
                     </children>
                 </GridPane>
-            <Button fx:id="Btn_Go" layoutX="1198.0" layoutY="668.0" mnemonicParsing="false" onAction="#handleGoButton" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: gray;" styleClass="basicButton" stylesheets="@../CSS/BasicUI" text="Go!" textFill="#ffc300">
+            <Button fx:id="Btn_Go" defaultButton="true" layoutX="1198.0" layoutY="668.0" mnemonicParsing="false" onAction="#handleGoButton" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: gray;" styleClass="basicButton" stylesheets="@../CSS/BasicUI" text="Go!" textFill="#ffc300">
                <font>
                   <Font name="Lucida Calligraphy Italic" size="12.0" />
                </font></Button>

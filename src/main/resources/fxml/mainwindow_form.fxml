@@ -194,21 +194,33 @@
                            <font>
                               <Font name="Lucida Calligraphy Italic" size="14.0" />
                            </font>
+                           <effect>
+                              <DropShadow spread="0.56" />
+                           </effect>
                         </Button>
                         <Button fx:id="Btn_West" mnemonicParsing="false" onAction="#handleEastNavButton" prefHeight="41.0" prefWidth="68.0" style="-fx-background-color: transparent;" styleClass="basicButton" stylesheets="@../CSS/BasicUI" text="West" textFill="#ffc300" GridPane.rowIndex="1">
                            <font>
                               <Font name="Lucida Calligraphy Italic" size="14.0" />
                            </font>
+                           <effect>
+                              <DropShadow spread="0.56" />
+                           </effect>
                         </Button>
                         <Button fx:id="Btn_South" mnemonicParsing="false" onAction="#handleSouthNavButton" prefHeight="41.0" prefWidth="68.0" style="-fx-background-color: transparent;" styleClass="basicButton" stylesheets="@../CSS/BasicUI" text="South" textFill="#ffc300" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <font>
                               <Font name="Lucida Calligraphy Italic" size="12.0" />
                            </font>
+                           <effect>
+                              <DropShadow spread="0.56" />
+                           </effect>
                         </Button>
                         <Button fx:id="Btn_North" mnemonicParsing="false" onAction="#handleNorthNavButton" prefHeight="41.0" prefWidth="68.0" style="-fx-background-color: transparent;" styleClass="basicButton" stylesheets="@../CSS/BasicUI" text="North" textFill="#ffc300" GridPane.columnIndex="1">
                            <font>
                               <Font name="Lucida Calligraphy Italic" size="12.0" />
                            </font>
+                           <effect>
+                              <DropShadow spread="0.56" />
+                           </effect>
                         </Button>
                             </children>
                         </GridPane>
@@ -237,7 +249,7 @@
                      </effect></Button>
                     </children>
                 </GridPane>
-            <Button fx:id="Btn_Go" layoutX="1198.0" layoutY="668.0" mnemonicParsing="false" onAction="#handleGoButton" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: gray;" styleClass="basicButton" stylesheets="@../CSS/BasicUI" text="Go!" textFill="#ffc300">
+            <Button fx:id="Btn_Go" defaultButton="true" layoutX="1198.0" layoutY="668.0" mnemonicParsing="false" onAction="#handleGoButton" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: gray;" styleClass="basicButton" stylesheets="@../CSS/BasicUI" text="Go!" textFill="#ffc300">
                <font>
                   <Font name="Lucida Calligraphy Italic" size="12.0" />
                </font></Button>

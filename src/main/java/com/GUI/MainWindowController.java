@@ -5,11 +5,14 @@ import javafx.animation.Animation;
 import javafx.animation.Transition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -22,7 +25,7 @@ public class MainWindowController {
 
     private double xOffset;
     private double yOffset;
-    
+
     TypeWriter TypeWriter = new TypeWriter();
 
     @FXML
@@ -81,7 +84,7 @@ public class MainWindowController {
 
     @FXML
     void handlePartyButton(ActionEvent event) {
-        try{
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/PartyWindow_form.fxml"));
             Stage PartyWindow = new Stage();
             PartyWindow.initStyle(StageStyle.TRANSPARENT);
@@ -98,8 +101,7 @@ public class MainWindowController {
                 PartyWindow.setX(dragEvent.getScreenX() + xOffset);
                 PartyWindow.setY(dragEvent.getScreenY() + yOffset);
             });
-        }
-        catch (IOException exception){
+        } catch (IOException exception) {
             exception.printStackTrace();
         }
     }
@@ -127,49 +129,50 @@ public class MainWindowController {
     @FXML
     void handleMapButton(ActionEvent event) {
         //Debug-Only Intended Code
-        TypeWriter.typeWriterPrint(this,"Map Pressed!\n");
+        TypeWriter.typeWriterPrint(this, "Map Pressed!\n");
     }
 
     @FXML
     void handleSaveButton(ActionEvent event) {
         //Debug-Only Intended Code
-        TypeWriter.typeWriterPrint(this,"Save Pressed!\n");
+        TypeWriter.typeWriterPrint(this, "Save Pressed!\n");
     }
 
     @FXML
     void handleLoadButton(ActionEvent event) {
         //Debug-Only Intended Code
-        TypeWriter.typeWriterPrint(this,"Load Pressed!\n");
+        TypeWriter.typeWriterPrint(this, "Load Pressed!\n");
     }
 
     @FXML
-    void handleNorthNavButton(ActionEvent event) {
+    void handleNorthNavButton() {
         //Debug-Only Intended Code
-        TypeWriter.typeWriterPrint(this,"North Pressed!\n");
+        TypeWriter.typeWriterPrint(this, "North Pressed!\n");
     }
 
     @FXML
-    void handleSouthNavButton(ActionEvent event) {
-    //Debug-Only Intended Code
-        TypeWriter.typeWriterPrint(this,"South Pressed!\n");
-    }
-
-    @FXML
-    void handleEastNavButton(ActionEvent event) {
+    void handleSouthNavButton() {
         //Debug-Only Intended Code
-        TypeWriter.typeWriterPrint(this,"East Pressed!\n");
+        TypeWriter.typeWriterPrint(this, "South Pressed!\n");
     }
 
     @FXML
-    void handleWestNavButton(ActionEvent event) {
+    void handleEastNavButton() {
         //Debug-Only Intended Code
-        TypeWriter.typeWriterPrint(this,"West Pressed!\n");
+        TypeWriter.typeWriterPrint(this, "East Pressed!\n");
+    }
+
+    @FXML
+    void handleWestNavButton() {
+        //Debug-Only Intended Code
+        TypeWriter.typeWriterPrint(this, "West Pressed!\n");
     }
 
     @FXML
     void handleGoButton(ActionEvent event) {
         //Debug-Only Intended Code
-        TypeWriter.typeWriterPrint(this,"Go Pressed!\n");
+        String Input = Txt_Input.getText();
+        TypeWriter.typeWriterPrint(this, Input + "\n");
     }
 
     @FXML
@@ -195,45 +198,71 @@ public class MainWindowController {
 
     }
 
-    public void typeWriterPrint(String textInput) {
-        String currentText = Lbl_Output.getText();
+//    public void typeWriterPrint(String textInput) {
+//        String currentText = Lbl_Output.getText();
+//
+//        final Animation typewriter = new Transition() {
+//            {
+//                setCycleDuration(Duration.millis(100));
+//            }
+//
+//            protected void interpolate(double v) {
+//                final int length = textInput.length();
+//                final int n = Math.round(length * (float) v);
+//                Lbl_Output.setText(currentText + textInput.substring(0, n));
+//            }
+//        };
+//        typewriter.play();
+//    }
 
-        final Animation typewriter = new Transition() {
-            {
-                setCycleDuration(Duration.millis(100));
-            }
-
-            protected void interpolate(double v) {
-                final int length = textInput.length();
-                final int n = Math.round(length * (float) v);
-                Lbl_Output.setText(currentText + textInput.substring(0, n));
-            }
-        };
-        typewriter.play();
-    }
-}
-
-    //    @FXML
-//    void handleControllerKeyPressed(KeyEvent event){
+//    @FXML
+//    void handleControllerKeyPressed(KeyEvent event) {
 //        KeyCode keyCode = event.getCode();
-//        switch (keyCode){
+//        switch (keyCode) {
 //            case LEFT -> {
-//                TypeWriter.typeWriterPrint("West Pressed!\n");
+//                handleWestNavButton();
 //                break;
 //            }
 //            case RIGHT -> {
-//                TypeWriter.typeWriterPrint("East Pressed!\n");
+//                handleEastNavButton();
 //                break;
 //            }
 //            case UP -> {
-//                TypeWriter.typeWriterPrint("North Pressed!\n");
+//                handleNorthNavButton();
 //                break;
 //            }
 //            case DOWN -> {
-//                TypeWriter.typeWriterPrint("South Pressed!\n");
+//                handleSouthNavButton();
 //                break;
 //            }
 //        }
 //    }
+
+    private EventHandler<KeyEvent> keyListener = new EventHandler<KeyEvent>() {
+        @Override
+        public void handle(KeyEvent keyEvent) {
+            KeyCode keyCode = keyEvent.getCode();
+            switch (keyCode) {
+                case LEFT -> {
+                    handleWestNavButton();
+                    break;
+                }
+                case RIGHT -> {
+                    handleEastNavButton();
+                    break;
+                }
+                case UP -> {
+                    handleNorthNavButton();
+                    break;
+                }
+                case DOWN -> {
+                    handleSouthNavButton();
+                    break;
+                }
+            }
+        }
+    };
+
+}
 
 
