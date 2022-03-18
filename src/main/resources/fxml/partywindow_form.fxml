@@ -51,27 +51,27 @@
                <children>
                   <ImageView fx:id="Img_P1_Profile" fitHeight="126.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <image>
-                        <Image url="@profile(placeholder).png" />
+                        <Image url="@profileP1.png" />
                      </image>
                   </ImageView>
                   <ImageView fx:id="Img_P2_Profile" fitHeight="126.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <image>
-                        <Image url="@profile(placeholder).png" />
+                        <Image url="@profileP2.png" />
                      </image>
                   </ImageView>
                   <ImageView fx:id="Img_P3_Profile" fitHeight="126.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                      <image>
-                        <Image url="@profile(placeholder).png" />
+                        <Image url="@profileP3.png" />
                      </image>
                   </ImageView>
                   <ImageView fx:id="Img_P4_Profile" fitHeight="126.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="7">
                      <image>
-                        <Image url="@profile(placeholder).png" />
+                        <Image url="@profileP4.png" />
                      </image>
                   </ImageView>
                   <ImageView fx:id="Img_P5_Profile" fitHeight="126.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="9">
                      <image>
-                        <Image url="@profile(placeholder).png" />
+                        <Image url="@profileP5.png" />
                      </image>
                   </ImageView>
                   <GridPane fx:id="Grid_P1_Buttons" GridPane.columnIndex="6" GridPane.rowIndex="1" GridPane.rowSpan="2">
@@ -564,31 +564,6 @@
                         <Font name="Lucida Calligraphy Italic" size="12.0" />
                      </font>
                   </Button>
-                  <ImageView fx:id="Img_P1_Border" fitHeight="126.0" fitWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <image>
-                        <Image url="@portraitbordersmallalpha.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="Img_P2_Border" fitHeight="126.0" fitWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                     <image>
-                        <Image url="@portraitbordersmallalpha.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="Img_P3_Border" fitHeight="126.0" fitWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                     <image>
-                        <Image url="@portraitbordersmallalpha.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="Img_P4_Border" fitHeight="126.0" fitWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
-                     <image>
-                        <Image url="@portraitbordersmallalpha.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="Img_P5_Border" fitHeight="126.0" fitWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
-                     <image>
-                        <Image url="@portraitbordersmallalpha.png" />
-                     </image>
-                  </ImageView>
                </children>
             </GridPane>
          </children>
