@@ -16,7 +16,7 @@
 
 <AnchorPane fx:id="Anc_Inventory" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="870.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.GUI.InventoryController">
    <children>
-      <ImageView fx:id="Img_Background" fitHeight="893.0" fitWidth="1000.0" layoutX="-60.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Img_Background" fitHeight="893.0" fitWidth="1000.0" layoutX="-47.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@buffel_background.png" />
          </image>
@@ -25,8 +25,22 @@
          <children>
             <TabPane fx:id="Tab_Inventory" prefHeight="355.0" prefWidth="252.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
-                <Tab fx:id="Tab_Weap" closable="false" text="Weapons" />
-                <Tab fx:id="Tab_Equip" closable="false" text="Equipments" />
+                <Tab fx:id="Tab_Weap" closable="false" text="Weapons">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="447.0">
+                           <children>
+                              <ListView fx:id="List_Items11" prefHeight="326.0" prefWidth="252.0" />
+                           </children>
+                        </AnchorPane>
+                     </content></Tab>
+                <Tab fx:id="Tab_Equip" closable="false" text="Equipments">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="447.0">
+                           <children>
+                              <ListView fx:id="List_Items1" prefHeight="326.0" prefWidth="252.0" />
+                           </children>
+                        </AnchorPane>
+                     </content></Tab>
                   <Tab fx:id="Tab_Items" closable="false" text="Consumables">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="447.0">

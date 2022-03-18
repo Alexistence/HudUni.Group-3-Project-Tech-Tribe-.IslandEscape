@@ -5,6 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import com.Main.*;
+import com.Story.*;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -16,8 +19,8 @@ public class MainWindow extends Application {
         primaryStage.setTitle("Island Escape v0.1");
         root.setId("mainWindow");
         Scene mainScene = new Scene(root, 1280, 720);
-        mainScene.getStylesheets().add(String.valueOf(this.getClass().getResource("/CSS/BasicUI")));
         primaryStage.setScene(mainScene);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

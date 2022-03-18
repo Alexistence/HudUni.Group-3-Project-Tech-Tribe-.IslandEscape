@@ -1,12 +1,22 @@
-package com.Story;
+package Script;
 
 import java.util.Scanner;
 
 public class StoryOfTheGame {
 
     //static int initialAmount = 50;
-    static Scanner scanner = new Scanner(System.in);
 
+
+
+    //Direction
+    String northDirectionCapital = "North";
+    String northDirectionSmaller = "north";
+    String southDirectionCapital = "South";
+    String southDirectionSmaller = "south";
+    String eastDirectionCapital = "East";
+    String eastDirectionSmaller = "east";
+    String westDirectionCapital = "West";
+    String westDirectionSmaller = "west";
 
     public static void main(String[] args) {
 
@@ -16,25 +26,8 @@ public class StoryOfTheGame {
         //Creating character's variable to use them efficiently
         //For the hero, we will let the user decide the user name!
         //We can get the main character's name from the user!
-        System.out.println("What username do you prefer for yourself?");
 
-
-
-        String firstHeroCharacter = scanner.nextLine(); //He was in army before, has the treasure map
-        String secondHeroCharacter = "George Bland"; //Missing in the initial stage, Scientist
-        String thirdHeroCharacter = "Jose Howlett"; // Tech Geek
-        String fourthHeroCharacter = "Noel Lester"; // Good with magic and witchery
-        String fifthHeroCharacter = "Andrew Murphy"; // Expert in karate, martial arts and taekwondo
-
-        //Direction
-        String northDirectionCapital = "North";
-        String northDirectionSmaller = "north";
-        String southDirectionCapital = "South";
-        String southDirectionSmaller = "south";
-        String eastDirectionCapital = "East";
-        String eastDirectionSmaller = "east";
-        String westDirectionCapital = "West";
-        String westDirectionSmaller = "west";
+        Scanner scanner = new Scanner(System.in);
 
         //methods for random event
 
@@ -43,8 +36,6 @@ public class StoryOfTheGame {
 
         //Game name and Title
         String gameName = "ISLAND ESCAPE";
-
-
 
         //Start of the game
         //Starting first Script

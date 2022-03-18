@@ -5,7 +5,19 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class MainGame{
-    public static void main(String[] args) {
+
+    public void initialiseGame(){
+        Random rand = new Random();
+        boolean player1Turn = true;
+        character player1 = new character(100,100,1,0,10,10,
+                50,10,1,null,null,null);
+        inventory player1Inventory = new inventory();
+        player1.initialiseInventory();
+
+    }
+
+
+    public void main(String[] args) {
         Random rand = new Random();
         boolean player1Turn = true;
         character player1 = new character(100,100,1,0,10,10,
